@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise #2: Changing colors</title>
+    <style>
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+
+  <!-- ## Exercise #2 (2): Changing colors
+
+  - [This page](exercise2.html) contains a 200x200px div.
+  Write JS code that sets the initial color of the div to blue,
+  then changes the color when the div is clicked.
+  On the first click, it changes from blue to red, on the next click from red to green,
+  then from green to blue (and once it's blue, it starts all over again).
+  - In this exercise, you are only allowed to make changes inside `<script>...</script>`
+  and cannot change other parts of the HTML code. -->
+
+    <script>
+      /* TODO: write JS code here */
+
+      function khange() {
+        kolors = ["blue", "red", "green", "purple"];
+        i = Math.floor(Math.random() * kolors.length)     // where only change occurs from exercise2
+        // grab div in question, and save to variable
+        let elToChange = document.getElementById("mydiv");
+
+        // add event listener for click response
+        elToChange.addEventListener("click", function(event) {
+          elToChange.style.backgroundColor = kolors[i++];
+						kolors[Math.floor(Math.random() * kolors.length)];
+          if(i >= kolors.length) {
+            i = 0;
+          }
+        });
+      } // end of FUNCTION
+    </script>
+  </head>
+  <body>
+    <div id="mydiv" onclick="khange()"></div>
+  </body>
+</html>

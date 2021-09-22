@@ -25,31 +25,23 @@
       /* TODO: write JS code here */
 
       function khange() {
-        // creat a string array of colors
-        kolors = ["blue", "red", "green", "blue"];
-        // declare random variable for iterating
+        kolors = ["blue", "red", "green", "purple"];
         i = 0;
         // grab div in question, and save to variable
         let elToChange = document.getElementById("mydiv");
+
         // add event listener for click response
         elToChange.addEventListener("click", function(event) {
           elToChange.style.backgroundColor = kolors[i++];
-          // if 'i' is >= 3, reset color back to blue (0)
+						kolors[Math.floor(Math.random() * kolors.length)];
           if(i >= kolors.length) {
             i = 0;
           }
         });
-      }
-
-
-
-
-
-
-
+      } // end of FUNCTION
     </script>
   </head>
   <body>
-    <div id="mydiv" onclick="change()"></div>
+    <div id="mydiv" onclick="khange()"></div>
   </body>
 </html>
