@@ -9,7 +9,7 @@
   "author": "Gabor Kozar",
   "dependencies": {
     "chai": "^4.0.1",
-    "mocha": "^3.4.2"
+    "mocha": "^9.1.2"
   },
   "license": "MIT",
   "repository": {
