@@ -1,8 +1,9 @@
 /**
  * Determines whether the given string is a palindrome, i.e. if you were to reverse the order of the characters inside the string, you would get back the original string.
  */
-function isPalindrome() {
-
+ function isPalindrome(aString) {
+   const backwardz = aString.split('').reverse().join('');
+   return backwardz == aString;
 }
 
 describe('isPalindrome', function() {
