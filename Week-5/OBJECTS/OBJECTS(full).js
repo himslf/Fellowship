@@ -123,3 +123,80 @@ console.log(stuz === stuz); // prints: true
 // when objects are created separately, they are distinct and essentially DIFFERENT.
 // even if given the same properties.
 // they are only strictly equal if they both point to the same object in memory.
+
+
+
+// ---------------------------------------------------------------------------------
+//								O B J E C T 
+//							Oriented Programming 
+// ---------------------------------------------------------------------------------
+
+// the PARENT OBJECT is often referred to as the CLASS.
+// OOP provides us the oppotunity to clean up our code, and model it best.
+// it pays to understand CLASSES
+
+// ES6 (2016/7) is not the latest version, but it was the most evolutionary
+// ES6 introduced Classes, and eliminated 'var'
+
+//					----- CLASSES -----	
+// CLASSES are blueprints	
+
+class someCar {
+	constructor (model, color) {
+		this.model = model;	// 'this' references the parameter so we can use it under the same name
+		this.color = color;
+		this.fuel = 77;
+	}
+	drive() {
+		this.fuel--;
+		return 'Vroom Vroom!'
+	}
+	refuel() {
+		return this.fuel = 77;	// reset fuel level as originated
+	}
+} // endCLASS
+
+const CX5 = new someCar ('Mazda CX5', 'White',)
+
+console.log(CX5)			// prints: someCar { model: 'Mazda CX5', color: 'White', fuel: 77 }
+console.log(CX5.drive())	// prints: Vroom Vroom!
+console.log(CX5.refuel())	// prints: 77
+
+// 1010101010101010101010101010101010101010101010101010101010101010100101010101010101
+
+/*	4 PILLARS of OOP:
+
+	– Encapsulation; think scope. think exclusivity.
+	– Inheritance; is when the child gets its info from parent element.
+	– Polymorphism; meaning 'More Than 1 Change'.
+	– Abstraction; is a conceptual thing. think 'representations' of things.
+*/
+
+//	INHERITANCE is when a CHILD component get its details/values from its PARENT.
+//	Related Variables, Properties, and Methods are bundles together in a CLASS
+
+// Inheritance & Polymorphism
+
+class animaL {
+	speak = () => {return `some_Animal_Sound`}
+}
+
+class Cow extends animaL {
+	speak = () => {return `MoOoo!`}
+}
+
+class Dog extends animaL {
+	speak = () => {return `RUFFRUFF!`}
+}
+
+class Cat extends animaL {
+	speak = () => {return `mEOwWw!`}
+}
+
+let cow1 = new Cow()
+let cat1 = new Cat()
+let dog1 = new Dog()
+
+console.log(cow1.speak())
+console.log(cat1.speak())
+console.log(dog1.speak())
