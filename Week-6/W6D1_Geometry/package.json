@@ -1,0 +1,18 @@
+{
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jsdoc-to-markdown": "^3.0.0"
+  },
+  "scripts": {
+    "test": "mocha -w"
+  }
+}
