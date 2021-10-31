@@ -65,24 +65,18 @@ console.log(allFoods);
 const badMotherF = {
     "nombre" : 'Jules Winnfield',
     "age" : 33,
-    "hometown" : 'Inglewood, California'
-};
+    "hometown" : 'Inglewood, California',
+    "pet" : 'T-Rex'
+};  // Object claring
 
-const {nombre, age, hometown} = badMotherF;
+const {nombre, age, hometown, ...petName} = badMotherF; // Destructuring
 
-console.log(badMotherF)
-
-console.log('-----------XXX---------')
 console.log(nombre);
 console.log(age);
-console.log(hometown);
-console.log('-----------OOO---------')
+console.log(hometown);  // printing/testing
 
-const {nombre, age : twoDetails} = badMotherF;
-
-console.log(samAge)
-
-
-console.log('-----------WWW---------')
+let twoDeets = [{nombre}, {age}];   // return array of 2 K:V pairs
+console.log(twoDeets)   // >> [ { nombre: 'Jules Winnfield' }, { age: 33 } ]
+console.log(petName);   // >> {pet: 'T-Rex'}
 
 

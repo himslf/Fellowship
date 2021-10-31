@@ -1,40 +1,51 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="theHow.css">
+  <title>Clashfards</title>
+</head>
+<body>
 
-  <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>CLASHFARDS</title>
-    <link href="theHow.css" rel="stylesheet">
-  </head>
-
-
-  <body>
-		<center>
-
-		<h2>CLASHFARDS: a flashcard game</h2>
-		<h5>(don't take yourself too <seriously>seriously</seriously>)</h5>
-
-		<div class="main">
+  <main>
+    
+    <header>
       <div class="container">
-        <h3>Play Below:</h3>
-        <p>But you've been warned; many have played...few have survived the humilty of becoming unable to remember such simplicity.
-			Should, you continue to play, you aknowledge the hardships and turbulence those before you have had to face. Good luck...
-		</p>
-      </div> <!--endContainer-->
-    </div> <!--endMain-->
-
-
-		<div class="game">
+        <div id="header">
+          <h1>"CLASHFARDS"</h1>
+          <div>
+            <button id="show_card_box">NEW CARD</button>
+            <button id="delete_cards">¡DELETE CARDS!</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section>
       <div class="container">
-        <h3>CLASHFARDS:</h3>
-        <p>!CARDS/GAME GO HERE!</p>
-      </div> <!--endContainer-->
-    </div> <!--endMain-->
+        <div id="create_card">
+          <h2>Don't Go Too Crazy...</h2>
+          <label for="question">QUESTION:</label>
+          <textarea id="question" maxlength="280"></textarea>
+          <label for="answer" maxlength="280">ANSWER:</label>
+          <br>
+          <textarea id="answer"></textarea>
+          <div>
+            <button id="save_card">save!</button> <button id="close_card_box">nvm...</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		</center>
-  </body>
+    <section>
+      <div class="container">
+        <div id="flashcards"></div>
+      </div>
+    </section>
 
-
+  </main>
+  
+  <script src="theWhen.js"></script>
+</body>
 </html>
