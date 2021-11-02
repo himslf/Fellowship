@@ -1,0 +1,37 @@
+.header  {
+  font-family: monospace;
+  background: rgb(201, 106, 63);
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: row; MAYBE */
+  display: flex; 
+  padding: 10px;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: darkslateblue;
+  background: rgb(114, 189, 96);
+  padding: 4px 32px;
+}
+
+ul {
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+  display: flex;
+  padding: 1px;
+  margin: 0;
+  padding: 0;
+  gap: 7px;
+  
+}
+
+a {
+  font-size: 22px;
+  background: white;
+  padding: 8px;
+  /* this removes the line under the links */
+  text-decoration: none;
+}
+
