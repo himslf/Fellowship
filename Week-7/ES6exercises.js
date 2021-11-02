@@ -62,21 +62,29 @@ console.log(allFoods);
 // 3) add those variables to your pet
 // log the most important thing about it: the pet's name 
 
-const badMotherF = {
+let badMotherF = {
     "nombre" : 'Jules Winnfield',
     "age" : 33,
     "hometown" : 'Inglewood, California',
-    "pet" : 'T-Rex'
+    // "pet" : 'T-Rex' << unnecessary
 };  // Object claring
 
-const {nombre, age, hometown, ...petName} = badMotherF; // Destructuring
+let { nombre, age, hometown } = badMotherF; // Destructuring
 
 console.log(nombre);
 console.log(age);
-console.log(hometown);  // printing/testing
+console.log(hometown);  // ^ printing/testing
 
-let twoDeets = [{nombre}, {age}];   // return array of 2 K:V pairs
-console.log(twoDeets)   // >> [ { nombre: 'Jules Winnfield' }, { age: 33 } ]
-console.log(petName);   // >> {pet: 'T-Rex'}
+pet = {}        // Object initializing
+                // but why isnt 'let' or 'const' necessary?
+
+badMotherF = { ...badMotherF, pet}; // 'updating' original object to include pet-obj
+
+let petName = "Rex";        // variable declaration; the pet's name
+let petAge = 6;             // " " " " ; pet's age
+let petBreed = 'Dinosaur';  // " " " " ; breed of pet
+
+badMotherF.pet = {petName, petAge, petBreed};   // combining objects[?], and 'updating' latter objects information
+console.log(badMotherF);
 
 
