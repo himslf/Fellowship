@@ -1,0 +1,58 @@
+html {
+    font-family: serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(95, 20, 102);
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(214, 167, 65);
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: rgb(12, 85, 85);
+    border: 5px solid red;
+    flex: 200px;
+
+  }
+
+/*flexbox styles here */
+section {
+    display: flex;
+    /* make section element the parent element(flex container) of the flex items */
+
+
+    border: 15px solid mediumslateblue;
+    /* use flex-wrap to keep flex items from breaking the container */
+
+
+    flex-wrap: wrap;
+    /* causes flex items to flow to next row in reverse order */
+
+
+    flex-direction: row-reverse;
+    /* shorthand for flex-direction and flex wrap */
+
+
+    flex-flow: row wrap;
+}
+
+article {
+flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+flex: 2 200px;
+}
+
